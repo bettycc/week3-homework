@@ -967,3 +967,393 @@ Processing by PlacesController#show as HTML
   [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1
   Rendered places/show.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 32ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:20:56 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (33.9ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (65.7ms)
+Completed 500 Internal Server Error in 276ms
+
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x007ff64ce7d818>:0x007ff64ce7cd50>):
+     6:   	<%= link_to place.title, "/places/#{place.title}" %>
+     7:   	</p>
+     8:   	<p>
+     9:   	delete <%= link_to delete, "/places/#{delete}"%>
+    10:   </li>
+    11:  <% end %>
+    12: </ul>
+  app/views/places/index.html.erb:9:in `block in _app_views_places_index_html_erb___3849476002195729190_70347914376060'
+  app/views/places/index.html.erb:3:in `_app_views_places_index_html_erb___3849476002195729190_70347914376060'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:21:33 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x007ff64ce7d818>:0x007ff649ee0bc8>):
+     6:   	<%= link_to place.title, "/places/#{place.title}" %>
+     7:   	</p>
+     8:   	<p>
+     9:   	delete <%= link_to delete, "/places/#{delete}"%>
+    10:   	</p>
+    11:   </li>
+    12:  <% end %>
+  app/views/places/index.html.erb:9:in `block in _app_views_places_index_html_erb___3849476002195729190_70347889497820'
+  app/views/places/index.html.erb:3:in `_app_views_places_index_html_erb___3849476002195729190_70347889497820'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:21:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 72ms (Views: 71.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-13 10:21:58 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 63ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/Willis%20Tower" for 127.0.0.1 at 2015-07-13 10:22:04 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago" for 127.0.0.1 at 2015-07-13 10:22:08 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago" for 127.0.0.1 at 2015-07-13 10:22:13 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Shedd%20Aquarium" for 127.0.0.1 at 2015-07-13 10:22:16 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Shedd Aquarium"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Shedd Aquarium' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Molly's%20Cupcake" for 127.0.0.1 at 2015-07-13 10:22:30 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Molly's Cupcake"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Molly''s Cupcake' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:26:43 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined local variable or method `deleted_place' for #<#<Class:0x007ff64ce7d818>:0x007ff64e073d38>):
+     6:   	<%= link_to place.title, "/places/#{place.title}" %>
+     7:   	</p>
+     8:   	<p>
+     9:   	Delete <%= link_to deleted_place, "/places/#{place.title}" %>
+    10:   	</p>
+    11:   </li>
+    12:  <% end %>
+  app/views/places/index.html.erb:9:in `block in _app_views_places_index_html_erb___3849476002195729190_70347923887000'
+  app/views/places/index.html.erb:3:in `_app_views_places_index_html_erb___3849476002195729190_70347923887000'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.8ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:28:25 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:29:12 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-13 10:29:17 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 29ms (Views: 27.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:30:41 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe/delete" for 127.0.0.1 at 2015-07-13 10:30:43 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "places" WHERE "places"."id" = 6
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:30:43 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Willis%20Tower/delete" for 127.0.0.1 at 2015-07-13 10:30:46 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1
+  [1m[36mSQL (2.8ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 7[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:30:46 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago/delete" for 127.0.0.1 at 2015-07-13 10:30:47 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "places" WHERE "places"."id" = 8
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:30:47 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Shedd%20Aquarium/delete" for 127.0.0.1 at 2015-07-13 10:30:48 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Shedd Aquarium"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Shedd Aquarium' LIMIT 1
+  [1m[36mSQL (2.7ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 9[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:30:48 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Molly's%20Cupcake/delete" for 127.0.0.1 at 2015-07-13 10:30:49 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Molly's Cupcake"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Molly''s Cupcake' LIMIT 1[0m
+  [1m[35mSQL (2.9ms)[0m  DELETE FROM "places" WHERE "places"."id" = 10
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:30:49 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 10:31:01 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.1ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:31:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:31:44 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (21.1ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 19], ["description", "he Willis Tower, built as and still commonly referred to as Sears Tower, is a 108-story, 1,451-foot (442 m) skyscraper in Chicago, Illinois, United States.[2] At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years. The Willis Tower is the second-tallest building in the United States and the 12th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.\n\nAs of December 2013, the building's largest tenant is United Airlines, which moved its corporate headquarters from the United Building at 77 West Wacker Drive in 2012 and today occupies around 20 floors with its headquarters and operations center."], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Sears_Tower_ss.jpg"], ["title", "Willis Tower"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 14], ["description", "The Art Institute of Chicago (AIC) is an encyclopedic art museum located in Chicago's Grant Park. It features a collection of Impressionist and Post-Impressionist art in its permanent collection. Its holdings also include American art, Old Masters, European and American decorative arts, Asian art, modern and contemporary art, and architecture and industrial and graphic design. In addition, it houses the Ryerson & Burnham Libraries.\n\nTracing its history to a free art school and gallery founded in 1866, the museum is located at 111 South Michigan Avenue in the Chicago Landmark Historic Michigan Boulevard District. It is associated with the School of the Art Institute of Chicago and is overseen by Director and President Douglas Druick.[2] It is one of the most visited art museums in the world with about 1.5 million visitors annually (2013), and with one million square feet in eight buildings, it is the second-largest art museum in the United States, after the Metropolitan Museum of Art."], ["photo_url", "http://windycityroadwarrior.com/blog1/wp-content/uploads/2010/04/E-Art-Inst-0985.jpg"], ["title", "Art institute of Chicago"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 69], ["description", "d"], ["photo_url", "http://www.appiantours.com/images/destinations/chicago/sheddaquarium.jpg"], ["title", "Shedd Aquarium"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:33:29 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.1ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 91ms (Views: 58.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe/delete" for 127.0.0.1 at 2015-07-13 10:33:32 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1
+  [1m[36mSQL (1.9ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 11[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:33:32 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Willis%20Tower" for 127.0.0.1 at 2015-07-13 10:33:35 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Willis%20Tower/delete" for 127.0.0.1 at 2015-07-13 10:33:37 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1
+  [1m[36mSQL (2.6ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 12[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:33:37 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago" for 127.0.0.1 at 2015-07-13 10:33:38 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago/delete" for 127.0.0.1 at 2015-07-13 10:33:41 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1
+  [1m[36mSQL (2.0ms)[0m  [1mDELETE FROM "places" WHERE "places"."id" = 13[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:33:41 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.8ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 19], ["description", "he Willis Tower, built as and still commonly referred to as Sears Tower, is a 108-story, 1,451-foot (442 m) skyscraper in Chicago, Illinois, United States.[2] At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years. The Willis Tower is the second-tallest building in the United States and the 12th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.\n\nAs of December 2013, the building's largest tenant is United Airlines, which moved its corporate headquarters from the United Building at 77 West Wacker Drive in 2012 and today occupies around 20 floors with its headquarters and operations center."], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Sears_Tower_ss.jpg"], ["title", "Willis Tower"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 14], ["description", "The Art Institute of Chicago (AIC) is an encyclopedic art museum located in Chicago's Grant Park. It features a collection of Impressionist and Post-Impressionist art in its permanent collection. Its holdings also include American art, Old Masters, European and American decorative arts, Asian art, modern and contemporary art, and architecture and industrial and graphic design. In addition, it houses the Ryerson & Burnham Libraries.\n\nTracing its history to a free art school and gallery founded in 1866, the museum is located at 111 South Michigan Avenue in the Chicago Landmark Historic Michigan Boulevard District. It is associated with the School of the Art Institute of Chicago and is overseen by Director and President Douglas Druick.[2] It is one of the most visited art museums in the world with about 1.5 million visitors annually (2013), and with one million square feet in eight buildings, it is the second-largest art museum in the United States, after the Metropolitan Museum of Art."], ["photo_url", "http://windycityroadwarrior.com/blog1/wp-content/uploads/2010/04/E-Art-Inst-0985.jpg"], ["title", "Art institute of Chicago"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 69], ["description", "d"], ["photo_url", "http://www.appiantours.com/images/destinations/chicago/sheddaquarium.jpg"], ["title", "Shedd Aquarium"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:35:06 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 93ms (Views: 56.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-13 10:35:09 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe/delete" for 127.0.0.1 at 2015-07-13 10:35:13 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "places" WHERE "places"."id" = 16
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 10:35:13 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 0.2ms)

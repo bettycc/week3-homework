@@ -14,4 +14,10 @@ class PlacesController < ApplicationController
 		#@place.download_details
 	end
 
+	def delete
+		deleted_place = Place.find_by(:title => params["id"])
+		deleted_place.delete
+		redirect_to root_url
+	end
+
 end

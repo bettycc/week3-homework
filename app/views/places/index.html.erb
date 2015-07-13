@@ -5,6 +5,9 @@
   	<p>
   	<%= link_to place.title, "/places/#{place.title}" %>
   	</p>
+  	<p>
+  	<%= link_to "Delete", "/places/#{place.title}/delete" %>
+  	</p>
   </li>
  <% end %>
 </ul>
