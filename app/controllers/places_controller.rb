@@ -4,8 +4,8 @@ class PlacesController < ApplicationController
 		@place = Place.all
 	end
 
-    #even without this method, i can create an table of data at seed.rb, why?
-	#def create
+    #even without this method, i can create an table of data at seed.rb, why? 
+	#def create		
 	#	redirect_to root_url
 	#end
 
@@ -19,5 +19,16 @@ class PlacesController < ApplicationController
 		deleted_place.delete
 		redirect_to root_url
 	end
+
+	def new
+		render "new"
+	end
+
+    def create
+    	#render "create"
+    	#Place.create
+    	redirect_to root_url
+    end
+
 
 end
