@@ -1,0 +1,10 @@
+
+<ul>
+  <% @place.each do |place| %>
+  <li>
+  	<p>
+  	<%= link_to place.title, "/places/#{place.title}" %>
+  	</p>
+  </li>
+ <% end %>
+</ul>

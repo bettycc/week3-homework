@@ -10,3 +10,735 @@ Started GET "/" for 127.0.0.1 at 2015-07-08 12:01:38 -0500
 Processing by Rails::WelcomeController#index as HTML
   Rendered /Users/jcohen/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/railties-4.1.8/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
 Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "places" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL) [0m
+  [1m[35m (19.8ms)[0m  ALTER TABLE "places" ADD "title" text
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "places" ADD "photo_url" text[0m
+  [1m[35m (1.8ms)[0m  ALTER TABLE "places" ADD "admission_price" integer
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "places" ADD "description" text[0m
+  [1m[35m (1.4ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "places"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 2], ["description", "b"], ["photo_url", ""], ["title", "B"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 3], ["description", "c"], ["photo_url", ""], ["title", "C"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 4], ["description", "d"], ["photo_url", ""], ["title", "D"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "places"[0m
+  [1m[35mPlace Load (0.4ms)[0m  SELECT "places".* FROM "places"
+
+
+Started GET "/place" for 127.0.0.1 at 2015-07-12 22:18:12 -0500
+
+ActionController::RoutingError (No route matches [GET] "/place"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (80.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:18:18 -0500
+Processing by PlacesController#index as HTML
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 365ms
+
+SyntaxError (/Users/betty/Desktop/week3-homework/app/views/places/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/betty/Desktop/week3-homework/app/views/places/index.html.erb:13: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/places/index.html.erb:11: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/places/index.html.erb:13: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (72.5ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:20:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (29.8ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 2345ms (Views: 2314.7ms | ActiveRecord: 30.1ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:20:24 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (76.3ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:20:24 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.8ms)
+
+
+Started GET "/places/Molly's%20Cupcake" for 127.0.0.1 at 2015-07-12 22:20:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Molly's%20Cupcake"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (69.0ms)
+
+
+Started GET "/places/Molly's%20Cupcake" for 127.0.0.1 at 2015-07-12 22:20:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Molly's%20Cupcake"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-12 22:21:18 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 81ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-12 22:21:20 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:25:21 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.4ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 93ms (Views: 92.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:25:26 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:25:35 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:25:39 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:25:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/B" for 127.0.0.1 at 2015-07-12 22:26:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/B"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.5ms)
+
+
+Started GET "/places/B" for 127.0.0.1 at 2015-07-12 22:26:06 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/B"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.7ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:26:10 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 38ms (Views: 36.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:26:12 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:34:36 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 156ms (Views: 154.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:35:08 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (35.4ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 395ms (Views: 261.9ms | ActiveRecord: 35.8ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:35:12 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (100.6ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:35:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (67.8ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:35:15 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (61.8ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:35:15 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (12.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 19], ["description", "he Willis Tower, built as and still commonly referred to as Sears Tower, is a 108-story, 1,451-foot (442 m) skyscraper in Chicago, Illinois, United States.[2] At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years. The Willis Tower is the second-tallest building in the United States and the 12th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.\n\nAs of December 2013, the building's largest tenant is United Airlines, which moved its corporate headquarters from the United Building at 77 West Wacker Drive in 2012 and today occupies around 20 floors with its headquarters and operations center."], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Sears_Tower_ss.jpg"], ["title", "Willis Tower"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 14], ["description", "The Art Institute of Chicago (AIC) is an encyclopedic art museum located in Chicago's Grant Park. It features a collection of Impressionist and Post-Impressionist art in its permanent collection. Its holdings also include American art, Old Masters, European and American decorative arts, Asian art, modern and contemporary art, and architecture and industrial and graphic design. In addition, it houses the Ryerson & Burnham Libraries.\n\nTracing its history to a free art school and gallery founded in 1866, the museum is located at 111 South Michigan Avenue in the Chicago Landmark Historic Michigan Boulevard District. It is associated with the School of the Art Institute of Chicago and is overseen by Director and President Douglas Druick.[2] It is one of the most visited art museums in the world with about 1.5 million visitors annually (2013), and with one million square feet in eight buildings, it is the second-largest art museum in the United States, after the Metropolitan Museum of Art."], ["photo_url", "http://windycityroadwarrior.com/blog1/wp-content/uploads/2010/04/E-Art-Inst-0985.jpg"], ["title", "Art institute of Chicago"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 69], ["description", "d"], ["photo_url", "http://www.appiantours.com/images/destinations/chicago/sheddaquarium.jpg"], ["title", "Shedd Aquarium"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:36:05 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 91ms (Views: 57.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:36:07 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (22.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (106.9ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:36:08 -0500
+
+ActionController::RoutingError (No route matches [GET] "/places/Wildberry%20Pancake%20and%20Cafe"):
+  actionpack (4.1.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.8) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.1.0) lib/quiet_assets.rb:27:in `call_with_quiet_assets'
+  actionpack (4.1.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.8) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.8) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.8) lib/rails/engine.rb:514:in `call'
+  railties (4.1.8) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/betty/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (63.1ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:52:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 136ms (Views: 111.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:52:32 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+Completed 500 Internal Server Error in 46ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1):
+  app/controllers/places_controller.rb:13:in `show'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.1ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:52:32 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.4ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1):
+  app/controllers/places_controller.rb:13:in `show'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.9ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:54:45 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.6ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:54:47 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1):
+  app/controllers/places_controller.rb:13:in `show'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (67.6ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:54:47 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.5ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: places.title_key: SELECT  "places".* FROM "places"  WHERE "places"."title_key" = 'Wildberry Pancake and Cafe' LIMIT 1):
+  app/controllers/places_controller.rb:13:in `show'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.6ms)
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-12 22:55:41 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:55:42 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."id_key" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+SQLite3::SQLException: no such column: places.id_key: SELECT  "places".* FROM "places"  WHERE "places"."id_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: places.id_key: SELECT  "places".* FROM "places"  WHERE "places"."id_key" = 'Wildberry Pancake and Cafe' LIMIT 1):
+  app/controllers/places_controller.rb:13:in `show'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (96.9ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-12 22:55:43 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."id_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+SQLite3::SQLException: no such column: places.id_key: SELECT  "places".* FROM "places"  WHERE "places"."id_key" = 'Wildberry Pancake and Cafe' LIMIT 1
+Completed 500 Internal Server Error in 2ms
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: places.id_key: SELECT  "places".* FROM "places"  WHERE "places"."id_key" = 'Wildberry Pancake and Cafe' LIMIT 1):
+  app/controllers/places_controller.rb:13:in `show'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.6ms)
