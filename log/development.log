@@ -2324,3 +2324,2555 @@ Started GET "/places/new" for 127.0.0.1 at 2015-07-13 12:26:41 -0500
 Processing by PlacesController#new as HTML
   Rendered places/new.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:16:55 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (34.7ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (52.4ms)
+Completed 200 OK in 517ms (Views: 284.0ms | ActiveRecord: 35.3ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:17:03 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:17:26 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/create" for 127.0.0.1 at 2015-07-13 14:17:28 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'create' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.4ms)
+
+
+Started GET "/places/create" for 127.0.0.1 at 2015-07-13 14:17:28 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'create' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.8ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:18:00 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:18:01 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:18:01 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:18:21 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 41ms (Views: 40.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:18:22 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:18:22 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 44ms (Views: 43.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:19:20 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.4ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 35ms (Views: 32.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:19:22 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/create" for 127.0.0.1 at 2015-07-13 14:19:23 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'create' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.2ms)
+
+
+Started GET "/places/create" for 127.0.0.1 at 2015-07-13 14:19:24 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'create' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.7ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:19:51 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/create" for 127.0.0.1 at 2015-07-13 14:19:53 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[36mPlace Load (0.1ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'create' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.5ms)
+
+
+Started GET "/places/create" for 127.0.0.1 at 2015-07-13 14:19:53 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"create"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'create' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:20:02 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:20:38 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:20:39 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:20:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"submit_new"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'submit_new' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:20:42 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"submit_new"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'submit_new' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.9ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:20:45 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"submit_new"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'submit_new' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.8ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:20:45 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"submit_new"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'submit_new' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.1ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:21:17 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:21:19 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:21:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.4ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 46ms (Views: 44.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:21:23 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:21:24 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:21:24 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:21:27 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:21:30 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:21:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:31:00 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:31:01 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:32:10 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:32:19 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:32:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Molly's%20Cupcake" for 127.0.0.1 at 2015-07-13 14:32:23 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Molly's Cupcake"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Molly''s Cupcake' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:39:59 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:40:01 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...d=( submit_tag "aaa", link_to "aaa","/places/submit_new");@o...
+...                               ^
+/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:20: syntax error, unexpected ',', expecting ')'
+...ubmit_tag "aaa", link_to "aaa","/places/submit_new");@output...
+...                               ^):
+  app/views/places/new.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/places/new.html.erb:20: syntax error, unexpected ',', expecting ')'
+  app/controllers/places_controller.rb:24:in `new'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (70.9ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:40:01 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 6ms
+
+SyntaxError (/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...d=( submit_tag "aaa", link_to "aaa","/places/submit_new");@o...
+...                               ^
+/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:20: syntax error, unexpected ',', expecting ')'
+...ubmit_tag "aaa", link_to "aaa","/places/submit_new");@output...
+...                               ^):
+  app/views/places/new.html.erb:20: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/places/new.html.erb:20: syntax error, unexpected ',', expecting ')'
+  app/controllers/places_controller.rb:24:in `new'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:40:39 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:40:40 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:40:44 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:40:44 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 44ms (Views: 43.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:41:23 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 33.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:41:24 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:19: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...n", :type => 'button',link_to "Login","/places/submit_new");...
+...                               ^
+/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:19: syntax error, unexpected ',', expecting ')'
+...pe => 'button',link_to "Login","/places/submit_new");@output...
+...                               ^):
+  app/views/places/new.html.erb:19: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/places/new.html.erb:19: syntax error, unexpected ',', expecting ')'
+  app/controllers/places_controller.rb:24:in `new'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.3ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:41:24 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 5ms
+
+SyntaxError (/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:19: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+...n", :type => 'button',link_to "Login","/places/submit_new");...
+...                               ^
+/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:19: syntax error, unexpected ',', expecting ')'
+...pe => 'button',link_to "Login","/places/submit_new");@output...
+...                               ^):
+  app/views/places/new.html.erb:19: syntax error, unexpected tSTRING_BEG, expecting keyword_do or '{' or '('
+  app/views/places/new.html.erb:19: syntax error, unexpected ',', expecting ')'
+  app/controllers/places_controller.rb:24:in `new'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (68.4ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:44:53 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 500 Internal Server Error in 4ms
+
+SyntaxError (/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:19: syntax error, unexpected ')', expecting =>
+...'button', "/places/submit_new");@output_buffer.safe_append='
+...                               ^
+/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/betty/Desktop/week3-homework/app/views/places/new.html.erb:27: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/places/new.html.erb:19: syntax error, unexpected ')', expecting =>
+  app/views/places/new.html.erb:25: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/places/new.html.erb:27: syntax error, unexpected keyword_end, expecting ')'
+  app/controllers/places_controller.rb:24:in `new'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (66.7ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:45:32 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 34ms (Views: 34.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:45:37 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:45:37 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:46:04 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:46:10 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:46:10 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 34.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:46:13 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 41ms (Views: 40.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:46:14 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.9ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:46:15 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.4ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:46:25 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:46:25 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.5ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:47:11 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:47:13 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:47:14 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Willis%20Tower" for 127.0.0.1 at 2015-07-13 14:47:16 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:47:18 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:47:20 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.1ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:47:20 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.9ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:47:31 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:47:33 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Willis%20Tower/delete" for 127.0.0.1 at 2015-07-13 14:47:40 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  DELETE FROM "places" WHERE "places"."id" = 22
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:47:40 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:47:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:47:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:54:28 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago" for 127.0.0.1 at 2015-07-13 14:54:30 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:54:34 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:54:35 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:54:35 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:54:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.7ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:54:41 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.6ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:54:52 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:55:03 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:55:03 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:55:05 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:55:06 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:55:08 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.9ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:55:08 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.5ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:14 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:56:17 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.7ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:56:17 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.1ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:20 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 30.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:56:24 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 14:56:30 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:56:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:32 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:33 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:34 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:34 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:56:36 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:56:37 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.7ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:56:37 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 14:58:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:58:20 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 14:58:21 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 32.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:58:23 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 30.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/places/Shedd%20Aquarium" for 127.0.0.1 at 2015-07-13 14:58:24 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Shedd Aquarium"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Shedd Aquarium' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Molly's%20Cupcake" for 127.0.0.1 at 2015-07-13 14:58:28 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Molly's Cupcake"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Molly''s Cupcake' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Molly's%20Cupcake/delete" for 127.0.0.1 at 2015-07-13 14:58:30 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Molly's Cupcake"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Molly''s Cupcake' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "places" WHERE "places"."id" = 25
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 14:58:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:58:32 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110249308260'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.0ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 14:58:32 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb__3574057439047956530_70110245701180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (24.2ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 19], ["description", "he Willis Tower, built as and still commonly referred to as Sears Tower, is a 108-story, 1,451-foot (442 m) skyscraper in Chicago, Illinois, United States.[2] At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years. The Willis Tower is the second-tallest building in the United States and the 12th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.\n\nAs of December 2013, the building's largest tenant is United Airlines, which moved its corporate headquarters from the United Building at 77 West Wacker Drive in 2012 and today occupies around 20 floors with its headquarters and operations center."], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Sears_Tower_ss.jpg"], ["title", "Willis Tower"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 14], ["description", "The Art Institute of Chicago (AIC) is an encyclopedic art museum located in Chicago's Grant Park. It features a collection of Impressionist and Post-Impressionist art in its permanent collection. Its holdings also include American art, Old Masters, European and American decorative arts, Asian art, modern and contemporary art, and architecture and industrial and graphic design. In addition, it houses the Ryerson & Burnham Libraries.\n\nTracing its history to a free art school and gallery founded in 1866, the museum is located at 111 South Michigan Avenue in the Chicago Landmark Historic Michigan Boulevard District. It is associated with the School of the Art Institute of Chicago and is overseen by Director and President Douglas Druick.[2] It is one of the most visited art museums in the world with about 1.5 million visitors annually (2013), and with one million square feet in eight buildings, it is the second-largest art museum in the United States, after the Metropolitan Museum of Art."], ["photo_url", "http://windycityroadwarrior.com/blog1/wp-content/uploads/2010/04/E-Art-Inst-0985.jpg"], ["title", "Art institute of Chicago"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 69], ["description", "d"], ["photo_url", "http://www.appiantours.com/images/destinations/chicago/sheddaquarium.jpg"], ["title", "Shedd Aquarium"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:02:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 98ms (Views: 62.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-13 15:02:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe/delete" for 127.0.0.1 at 2015-07-13 15:02:58 -0500
+Processing by PlacesController#delete as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "places" WHERE "places"."id" = 29
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:02:58 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Willis%20Tower" for 127.0.0.1 at 2015-07-13 15:02:59 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Art%20institute%20of%20Chicago" for 127.0.0.1 at 2015-07-13 15:03:01 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Art institute of Chicago"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Art institute of Chicago' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Shedd%20Aquarium" for 127.0.0.1 at 2015-07-13 15:03:04 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Shedd Aquarium"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Shedd Aquarium' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Molly's%20Cupcake" for 127.0.0.1 at 2015-07-13 15:03:06 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Molly's Cupcake"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Molly''s Cupcake' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:03:09 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 41.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:03:30 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (2.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:03:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:03:31 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:03:32 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:03:36 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715203360'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.5ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:03:36 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715186180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.6ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:05:30 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:05:33 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:05:40 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:05:40 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:05:41 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:05:43 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715203360'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.8ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:05:43 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715186180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.3ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:05:46 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 35ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:05:47 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:06:39 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:06:42 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (92.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 93.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:06:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:06:44 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:06:45 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715203360'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.6ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:06:45 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715186180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:13:12 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.7ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 41ms (Views: 36.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:13:14 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715203360'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.4ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:13:14 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715186180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.9ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:13:17 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:13:20 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:13:20 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:13:25 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715203360'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.9ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:13:25 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.3ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2660264873852340166_70217715186180'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:13:30 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 29.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:13:33 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:13:33 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:13:38 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:13:44 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:13:44 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (2.6ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 19], ["description", "he Willis Tower, built as and still commonly referred to as Sears Tower, is a 108-story, 1,451-foot (442 m) skyscraper in Chicago, Illinois, United States.[2] At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years. The Willis Tower is the second-tallest building in the United States and the 12th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.\n\nAs of December 2013, the building's largest tenant is United Airlines, which moved its corporate headquarters from the United Building at 77 West Wacker Drive in 2012 and today occupies around 20 floors with its headquarters and operations center."], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Sears_Tower_ss.jpg"], ["title", "Willis Tower"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 14], ["description", "The Art Institute of Chicago (AIC) is an encyclopedic art museum located in Chicago's Grant Park. It features a collection of Impressionist and Post-Impressionist art in its permanent collection. Its holdings also include American art, Old Masters, European and American decorative arts, Asian art, modern and contemporary art, and architecture and industrial and graphic design. In addition, it houses the Ryerson & Burnham Libraries.\n\nTracing its history to a free art school and gallery founded in 1866, the museum is located at 111 South Michigan Avenue in the Chicago Landmark Historic Michigan Boulevard District. It is associated with the School of the Art Institute of Chicago and is overseen by Director and President Douglas Druick.[2] It is one of the most visited art museums in the world with about 1.5 million visitors annually (2013), and with one million square feet in eight buildings, it is the second-largest art museum in the United States, after the Metropolitan Museum of Art."], ["photo_url", "http://windycityroadwarrior.com/blog1/wp-content/uploads/2010/04/E-Art-Inst-0985.jpg"], ["title", "Art institute of Chicago"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 69], ["description", "d"], ["photo_url", "http://www.appiantours.com/images/destinations/chicago/sheddaquarium.jpg"], ["title", "Shedd Aquarium"]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:14:29 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.6ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 94ms (Views: 58.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:14:31 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:14:42 -0500
+Processing by PlacesController#create as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:14:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:14:45 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:15:15 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:15:15 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:15:17 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:15:22 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2254129509472186676_70127307000900'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:15:22 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___2254129509472186676_70127345484800'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:15:50 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 35ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:15:56 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:15:56 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:15:59 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:16:01 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:19:36 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:19:41 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:19:46 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:19:46 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:19:53 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:19:53 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/Wildberry%20Pancake%20and%20Cafe" for 127.0.0.1 at 2015-07-13 15:19:57 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Wildberry Pancake and Cafe"}
+  [1m[35mPlace Load (0.4ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'Wildberry Pancake and Cafe' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places/Willis%20Tower" for 127.0.0.1 at 2015-07-13 15:20:03 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"Willis Tower"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'Willis Tower' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:22:50 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:22:54 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:23:01 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:23:12 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:23:12 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:19 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:24 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:26 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:27 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:28 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:31 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:36 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:23:39 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "places"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Pancakes & other big portions of American eats draw hungry folks to this breakfast-lunch cafe."], ["photo_url", "http://www.wildberrycafe.com/images/location-chicago.jpg"], ["title", "Wildberry Pancake and Cafe"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 19], ["description", "he Willis Tower, built as and still commonly referred to as Sears Tower, is a 108-story, 1,451-foot (442 m) skyscraper in Chicago, Illinois, United States.[2] At completion in 1973, it surpassed the World Trade Center towers in New York to become the tallest building in the world, a title it held for nearly 25 years. The Willis Tower is the second-tallest building in the United States and the 12th-tallest in the world. More than one million people visit its observation deck each year, making it one of Chicago's most popular tourist destinations. The structure was renamed in 2009 by the Willis Group as part of its lease on a portion of the tower's space.\n\nAs of December 2013, the building's largest tenant is United Airlines, which moved its corporate headquarters from the United Building at 77 West Wacker Drive in 2012 and today occupies around 20 floors with its headquarters and operations center."], ["photo_url", "https://upload.wikimedia.org/wikipedia/commons/b/ba/Sears_Tower_ss.jpg"], ["title", "Willis Tower"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 14], ["description", "The Art Institute of Chicago (AIC) is an encyclopedic art museum located in Chicago's Grant Park. It features a collection of Impressionist and Post-Impressionist art in its permanent collection. Its holdings also include American art, Old Masters, European and American decorative arts, Asian art, modern and contemporary art, and architecture and industrial and graphic design. In addition, it houses the Ryerson & Burnham Libraries.\n\nTracing its history to a free art school and gallery founded in 1866, the museum is located at 111 South Michigan Avenue in the Chicago Landmark Historic Michigan Boulevard District. It is associated with the School of the Art Institute of Chicago and is overseen by Director and President Douglas Druick.[2] It is one of the most visited art museums in the world with about 1.5 million visitors annually (2013), and with one million square feet in eight buildings, it is the second-largest art museum in the United States, after the Metropolitan Museum of Art."], ["photo_url", "http://windycityroadwarrior.com/blog1/wp-content/uploads/2010/04/E-Art-Inst-0985.jpg"], ["title", "Art institute of Chicago"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)[0m  [["admission_price", 69], ["description", "d"], ["photo_url", "http://www.appiantours.com/images/destinations/chicago/sheddaquarium.jpg"], ["title", "Shedd Aquarium"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "places" ("admission_price", "description", "photo_url", "title") VALUES (?, ?, ?, ?)  [["admission_price", 0], ["description", "Miss Molly: Molly was my third-grade teacher. Whenever one of us had\na birthday, she would bake us cupcakes. I still remember how good they\nwere. She had her own special recipe for chocolate and vanilla. Just\nabout everyone who tries them thinks they're the best cupcakes ever.\n\tOur Mission: In honor of Molly and as a way to help our children, a\nportion of our profits is donated directly to schools in our community.\nEvery time you eat a cupcake or sip a latte, you help our kids. So\neat up! "], ["photo_url", "http://visitclarkstreet.com/filebin/images/merchantimages/CS_D_Mollys_Cupcakes.jpg"], ["title", "Molly's Cupcake"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/places" for 127.0.0.1 at 2015-07-13 15:32:32 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (1.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 99ms (Views: 64.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:32:35 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:32:37 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:32:38 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:32:46 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (2.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:32:46 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:32:47 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:32:49 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:33:22 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 60ms (Views: 56.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:33:23 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:33:33 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:33:33 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:34:42 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.5ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:34:45 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:34:48 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (1.8ms)[0m  commit transaction
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `show' for #<Class:0x007fbd3b5091a0>):
+  app/controllers/places_controller.rb:35:in `create'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (79.6ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:34:48 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `show' for #<Class:0x007fbd3b5091a0>):
+  app/controllers/places_controller.rb:35:in `create'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:34:58 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.3ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:35:02 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 35ms (Views: 34.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:46:25 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:46:31 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 38ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/index" for 127.0.0.1 at 2015-07-13 15:46:40 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'index' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225370802340'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.0ms)
+
+
+Started GET "/places/index" for 127.0.0.1 at 2015-07-13 15:46:40 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'index' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225361198440'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (52.9ms)
+
+
+Started GET "/places/index" for 127.0.0.1 at 2015-07-13 15:47:09 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPlace Load (0.3ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'index' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225370802340'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+
+
+Started GET "/places/index" for 127.0.0.1 at 2015-07-13 15:47:09 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'index' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225361198440'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.8ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:47:53 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:47:54 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.5ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:47:57 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:48:02 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `show' for #<Class:0x007fbd3b5091a0>):
+  app/controllers/places_controller.rb:35:in `create'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (74.8ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:48:02 -0500
+Processing by PlacesController#create as HTML
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "places" DEFAULT VALUES[0m
+  [1m[35m (1.1ms)[0m  commit transaction
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `show' for #<Class:0x007fbd3b5091a0>):
+  app/controllers/places_controller.rb:35:in `create'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (69.9ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:50:43 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:50:43 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.4ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 35ms (Views: 34.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 15:50:46 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/submit_new" for 127.0.0.1 at 2015-07-13 15:50:50 -0500
+Processing by PlacesController#create as HTML
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "places" DEFAULT VALUES
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-07-13 15:50:50 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 15:50:52 -0500
+Processing by PlacesController#index as HTML
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:58:05 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225370802340'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.2ms)
+
+
+Started GET "/places//delete" for 127.0.0.1 at 2015-07-13 15:58:05 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'delete' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225361198440'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.3ms)
+
+
+Started GET "/places/" for 127.0.0.1 at 2015-07-13 16:03:48 -0500
+Processing by PlacesController#index as HTML
+  [1m[35mPlace Load (0.2ms)[0m  SELECT "places".* FROM "places"
+  Rendered places/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/places/new" for 127.0.0.1 at 2015-07-13 16:03:50 -0500
+Processing by PlacesController#new as HTML
+  Rendered places/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/places/index" for 127.0.0.1 at 2015-07-13 16:03:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[36mPlace Load (0.2ms)[0m  [1mSELECT  "places".* FROM "places"  WHERE "places"."title" = 'index' LIMIT 1[0m
+  Rendered places/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225370802340'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.2ms)
+
+
+Started GET "/places/index" for 127.0.0.1 at 2015-07-13 16:03:55 -0500
+Processing by PlacesController#show as HTML
+  Parameters: {"id"=>"index"}
+  [1m[35mPlace Load (0.2ms)[0m  SELECT  "places".* FROM "places"  WHERE "places"."title" = 'index' LIMIT 1
+  Rendered places/show.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div class="place">
+    2:   
+    3:   <h2><%= @place.title %></h2>
+    4: 
+    5:   <p>
+    6:     Admission Price: <%= @place.admission_price %>
+  app/views/places/show.html.erb:3:in `_app_views_places_show_html_erb___4022035790202791702_70225361198440'
+
+
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/betty/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.4ms)

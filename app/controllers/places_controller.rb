@@ -25,8 +25,13 @@ class PlacesController < ApplicationController
 	end
 
     def create
-    	#render "create"
-    	#Place.create
+    	#added_place = Place.new(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
+    	#added_place.save
+
+    	#@place = Place.new(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
+    	#@place.save
+
+    	added_place = Place.create(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
     	redirect_to root_url
     end
 

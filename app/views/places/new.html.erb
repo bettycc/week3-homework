@@ -9,12 +9,13 @@
 <li><p>Admission Price: <input admissionprice ="admission_price" type = "integer" placeholder = "Admission Price"></p></li>
 <p></p>
 
-<li><p>Description: <input description = "description" type = "text" placeholder = "Description"></p></li>
+<li><p>Description: </p>
+    <p><textarea description = "description" type = "text"> Description goes here.</textarea></p></li>
 <p></p>
 <p></p>
 
 <li><input type = "submit" value = "Submit">
-  #<%link_to "Submit","/places/create" %>
+  <%=link_to "submit","/places/submit_new" %>
   </li>
 
 <p></p>

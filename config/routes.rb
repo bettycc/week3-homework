@@ -14,8 +14,11 @@ Rails.application.routes.draw do
 
   get '/places/:id/delete' => 'places#delete'
 
+
+
   #get '/places/new' => 'places#new'
   #need to move line15 before show action, routs order matters
 
   #get 'places/submit_new' => 'places#create' 
+
 end
