@@ -33,8 +33,8 @@ class PlacesController < ApplicationController
     
     def update
     	@place = Place.find_by(:title => params["id"])
-    	@place.update_attributes(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
-        redirect_to root_url
+    	@place.update(params.require(@place).permit(:title, :photo_url, :admission_price, :description))
+        redirect_to :action => :show, :id => @place
     end
 
 end
