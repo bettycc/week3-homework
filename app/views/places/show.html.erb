@@ -1,6 +1,9 @@
 <div class="place">
   
   <h2><%= @place.title %></h2>
+  <p>
+  	<%= link_to "edit", "/places/:id/edit"%>
+  </p>
 
   <p>
     Admission Price: <%= @place.admission_price %>

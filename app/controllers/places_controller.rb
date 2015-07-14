@@ -25,15 +25,20 @@ class PlacesController < ApplicationController
 	end
 
     def create
-    	#added_place = Place.new(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
-    	#added_place.save
-
-    	#@place = Place.new(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
-    	#@place.save
-
-    	added_place = Place.create(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
+    	Place.create(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
     	redirect_to root_url
     end
 
+    def edit
+    #	render "edit"
+        @place = Place.find_by(:title => params["id"])
+    end
+
+    
+    def update
+    	@place = Place.find_by(:title => params["id"])
+    	@place.update_attributes(:title => params["title"], :photo_url => params["photo_url"], :admission_price => params["admission_price"], :description => params["description"])
+        redirect_to root_url
+    end
 
 end

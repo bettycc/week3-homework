@@ -1,0 +1,27 @@
+
+<%= form_for @place, :url => {:controller => "place", :action => "update", :id => @place} do |place| %>
+<ul>
+
+<li><p>Title: <input name= "title" type="text" maxlength = "255" placeholder = "title"></p></li>
+<p></p>
+
+<li><p>Photo URL: <input name="photo_url" type = "text" placeholder ="Photo URL"></p></li>
+<p></p>
+
+<li><p>Admission Price: <input name="admission_price" type = "integer" placeholder = "Admission Price"></p></li>
+<p></p>
+
+<li><p>Description: </p>
+    <p><textarea name= "description" type = "text"> Description goes here.</textarea></p></li>
+<p></p>
+<p></p>
+
+<li><input type = "submit" value = "Submit">
+  </li>
+
+<p></p>
+</ul>
+
+</form>
+
+<%end%>
